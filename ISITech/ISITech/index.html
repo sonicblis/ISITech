@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ISI Tech</title>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+    <script src="scripts/app.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="content/site.css" />
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.1/css/font-awesome.min.css" />
+
+</head>
+<body>
+    <h2>ISI Tech Reference</h2>
+
+    <div ng-app="vote" ng-controller="VotingController">
+        <input type="button" value="Add New" /><br /><br />
+        <div class="option" ng-repeat="Option in Options | orderBy:'-Votes'">
+            <div class="left">
+                <i class="fa fa-arrow-circle-o-up"
+                   ng-click="Upvote(Option)"
+                   ng-class="{active: Option.Upvoted}"></i>
+                <i class="fa fa-arrow-circle-o-down"
+                   ng-click="Downvote(Option)"
+                   ng-class="{activedown: Option.Downvoted}"></i>
+            </div>
+            <div class="left">{{Option.Votes}} - {{Option.Name}}</div>
+            <div class="right" ng-show="Option.Presenter != ''">
+                Presented By: {{Option.Presenter}}
+                | <a>Resources</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+﻿body{
+    font-family: verdana;
+    font-size: 10pt;
+}
+div{
+    overflow: auto;
+}
+.active{
+    color: #0066FF;
+}
+.activedown{
+    color: #FF3300;
+}
+i{
+    font-size: 14pt;
+    color: #888;
+    cursor: pointer;
+}
+input{
+    border: solid 1px #888;
+}
+a{
+    color: blue;
+}
+.option{
+    border: solid 1px #aaa;
+    background: #ccc;
+    margin-bottom: 5px;    
+}
+.option div
+{
+    padding: 5px;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
